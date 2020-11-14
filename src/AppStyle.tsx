@@ -1,3 +1,6 @@
+import {createGlobalStyle} from 'styled-components'
+
+const AppStyle  =createGlobalStyle`
 .App {
   text-align: center;
 }
@@ -36,3 +39,6 @@
     transform: rotate(360deg);
   }
 }
+`;
+
+export default AppStyle;
