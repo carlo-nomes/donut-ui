@@ -1,6 +1,6 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
-const AppStyle  =createGlobalStyle`
+const AppStyle = createGlobalStyle`
 .App {
   text-align: center;
 }
