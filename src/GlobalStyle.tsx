@@ -1,22 +1,28 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
-const GlobalStyle = createGlobalStyle`
-${normalize}
+const variables = css`
+  :root {
+    --font-family-sans: 'Open Sans', sans-serif;
+    --font-family-serif: 'Roboto Slab', serif;
+    --font-family-mono: 'Source Code Pro', monospace;
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    --background-color: #f8f8f8;
+    --foreground-color: #262626;
   }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+`;
+
+const GlobalStyle = createGlobalStyle`
+  ${normalize}
+  ${variables}
+
+  body {
+    background: var(--background-color);
+    color: var(--foreground-color);
+
+    font-family: var(--font-family-serif);
+    font-size: 1rem;
   }
-  `;
+`;
 
 export default GlobalStyle;
