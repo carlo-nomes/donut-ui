@@ -15,7 +15,7 @@ export type ButtonProps = HTMLProps<HTMLButtonElement> &
 
 const Button = (props: ButtonProps) => {
   const { variant = 'filled', color: presetColor, ...other } = props;
-  const color = useColorPresets(presetColor);
+  const color = useColorPresets(presetColor || 'default');
 
   switch (variant) {
     case 'text':

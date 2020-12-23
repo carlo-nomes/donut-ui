@@ -1,6 +1,10 @@
 export type Color = 'primary' | 'secondary' | 'warning' | 'danger' | string;
 
-const useColorPresets = (color?: Color) => {
+const useColorPresets = (color: Color) => {
+  if (!color && process.env.NODE_ENV === 'development') {
+    console.warn('Invalid value passed to useColorPresets hook!');
+  }
+
   switch (color) {
     case 'primary':
       return 'var(--colors-primary)';
