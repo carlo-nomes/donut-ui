@@ -7,8 +7,17 @@ const variables = css`
     --font-family-serif: 'Roboto Slab', serif;
     --font-family-mono: 'Source Code Pro', monospace;
 
-    --background-color: #f8f8f8;
-    --foreground-color: #262626;
+    --colors-background: #f8f8f8;
+    --colors-text: #262626;
+    --colors-text-light: #f8f8f8;
+
+    --colors-primary: #3cb7ae;
+    --colors-secondary: #3c4fb7;
+    --colors-warning: #b7af3c;
+    --colors-danger: #b7403c;
+
+    --border-width-default: 0.05rem;
+    --border-radius-default: 0.25rem;
   }
 `;
 
@@ -17,8 +26,8 @@ const GlobalStyle = createGlobalStyle`
   ${variables}
 
   body {
-    background: var(--background-color);
-    color: var(--foreground-color);
+    background: var(--colors-background);
+    color: var(--colors-text);
 
     font-family: var(--font-family-serif);
     font-size: 1rem;
