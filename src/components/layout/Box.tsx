@@ -7,6 +7,8 @@ import size, { SizeProps } from './css/size';
 export type BoxProps = SizeProps & MarginProps & PaddingProps & FlexBoxProps;
 
 const Box = styled.div<BoxProps>`
+  box-sizing: border-box;
+
   ${flexBox}
 
   ${size}
