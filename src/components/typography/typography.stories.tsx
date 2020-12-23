@@ -1,5 +1,6 @@
-import React from 'react';
-import Box from '../layout/Box';
+import { Story } from '@storybook/react/types-6-0';
+import React, { FC } from 'react';
+import Box, { BoxProps } from '../layout/Box';
 import Code from './Code';
 import { H1, H2, H3, H4, H5 } from './Heading';
 import Text from './Text';
@@ -7,18 +8,23 @@ import Text from './Text';
 const story = { title: 'Typography' };
 export default story;
 
-export const HeadingsStory = () => (
-  <Box>
+const CenterBox: FC<BoxProps> = (props) => (
+  <Box width="500px" mx="auto" {...props} />
+);
+
+export const HeadingStory: Story = () => (
+  <CenterBox>
     <H1>Heading 1</H1>
     <H2>Heading 2</H2>
     <H3>Heading 3</H3>
     <H4>Heading 4</H4>
     <H5>Heading 5</H5>
-  </Box>
+  </CenterBox>
 );
+HeadingStory.storyName = 'Heading';
 
-export const TextStory = () => (
-  <Box width="500px" mx="auto">
+export const TextStory: Story = () => (
+  <CenterBox>
     <H2>Lorem Ipsum</H2>
     <Text>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque
@@ -37,10 +43,11 @@ export const TextStory = () => (
       quo quibusdam placeat harum velit voluptas, commodi provident molestiae,
       in quos corporis non repellat labore cupiditate eum facilis laborum et?
     </Text>
-  </Box>
+  </CenterBox>
 );
+TextStory.storyName = 'Text';
 
-export const CodeStory = () => {
+export const CodeStory: Story = () => {
   const snippet = `
   function sum(a, b){
     return a + b;
@@ -48,8 +55,9 @@ export const CodeStory = () => {
   `;
 
   return (
-    <Box width="500px" mx="auto">
+    <CenterBox>
       <Code>{snippet}</Code>
-    </Box>
+    </CenterBox>
   );
 };
+CodeStory.storyName = 'Code';
