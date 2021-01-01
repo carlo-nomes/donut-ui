@@ -5,8 +5,8 @@ import { H1, H2 } from './components/typography/Heading';
 function App() {
   return (
     <Box align="center">
-      <H1>Optis</H1>
-      <H2>Design System 2020</H2>
+      <H1>donut ui</H1>
+      <H2>Version 0.0.0</H2>
     </Box>
   );
 }
