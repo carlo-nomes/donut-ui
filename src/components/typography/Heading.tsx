@@ -1,8 +1,23 @@
 import styled, { css } from 'styled-components';
 
-const headingCss = css`
+type AlignOptions =
+  | 'left'
+  | 'right'
+  | 'center'
+  | 'justify'
+  | 'justify-all'
+  | 'start'
+  | 'end'
+  | 'match-parent';
+
+type HeadingProps = {
+  align?: AlignOptions;
+};
+
+const headingCss = css<HeadingProps>`
   font-family: var(--font-family-sans);
   margin: 0 0 1rem 0;
+  text-align: ${({ align }) => align || 'start'};
 `;
 
 export const H1 = styled.h1`
