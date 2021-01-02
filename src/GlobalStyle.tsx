@@ -16,8 +16,14 @@ const variables = css`
     --colors-warning: #b7af3c;
     --colors-danger: #b7403c;
 
+    --colors-darken-1: rgba(0, 0, 0, 0.05);
+
+    --colors-lighten-1: rgba(255, 255, 255, 0.05);
+
     --border-width-default: 0.05rem;
     --border-radius-default: 0.25rem;
+
+    --spacing-default: 1rem;
   }
 `;
 
