@@ -10,14 +10,7 @@ import { H2, H5 } from '../typography/Heading';
 const story = { title: 'Form' };
 export default story;
 
-const Template: Story = (args) => <Input {...args} />;
-
-export const Default = Template.bind({
-  placeholder: 'placeholder',
-  type: 'text',
-});
-
-export const LabelAndInput = () => {
+export const Form = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) =>
     event.preventDefault();
 
