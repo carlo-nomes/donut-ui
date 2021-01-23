@@ -1,5 +1,4 @@
 import React, { FormEvent } from 'react';
-import { Story } from '@storybook/react/types-6-0';
 import Input from './Input';
 import FormGroup from './FormGroup';
 import Label from './Label';
