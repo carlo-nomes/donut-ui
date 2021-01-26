@@ -16,14 +16,14 @@ const story = {
 };
 export default story;
 
-const Template: Story = ({ label, ...args }) => {
-  return (
+const Template: Story = ({ label, ...args }) => (
+  <Box width="500px" mx="auto" align="stretch">
     <FormGroup>
       <Label htmlFor={args.id}>{label}</Label>
       <Input {...args} />
     </FormGroup>
-  );
-};
+  </Box>
+);
 
 export const TextInput = Template.bind({});
 TextInput.args = {
@@ -46,5 +46,6 @@ RangeInput.args = {
   label: 'Range',
   id: 'range-input',
   type: 'range',
-  placeholder: '0 - 100',
+  min: 0,
+  max: 10,
 };
