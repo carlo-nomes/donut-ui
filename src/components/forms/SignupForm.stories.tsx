@@ -57,7 +57,7 @@ export const SignupForm = () => {
 
       <Box mt={1} direction="row" justify="end">
         <H5>
-          Already have an account? <a href="#">Sign in</a>
+          Already have an account? <a href={window.location.href}>Sign in</a>
         </H5>
       </Box>
     </Box>
