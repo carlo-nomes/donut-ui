@@ -6,9 +6,9 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <body>
+    <>
       <GlobalStyle />
       <Story />
-    </body>
+    </>
   ),
 ];
