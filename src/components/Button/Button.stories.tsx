@@ -1,12 +1,11 @@
 import React from 'react';
-import ButtonComponent, { ButtonProps } from './Button';
+import Button, { ButtonProps } from './Button';
 import { Story } from '@storybook/react/types-6-0';
 
 const story = {
   title: 'Button',
-  component: ButtonComponent,
+  component: Button,
   args: {
-    variant: 'filled',
     children: 'Label',
     color: 'primary',
     width: 20,
@@ -14,6 +13,19 @@ const story = {
 };
 export default story;
 
-const Template: Story<ButtonProps> = (args) => <ButtonComponent {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const Button = Template.bind({});
+export const Filled = Template.bind({});
+Filled.args = {
+  variant: 'filled',
+};
+
+export const Outline = Template.bind({});
+Outline.args = {
+  variant: 'outline',
+};
+
+export const Text = Template.bind({});
+Text.args = {
+  variant: 'text',
+};
