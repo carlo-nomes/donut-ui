@@ -7,6 +7,8 @@ import React, {
   useCallback,
 } from 'react';
 import styled from 'styled-components';
+import FormGroup from '../forms/FormGroup';
+import Label from '../forms/Label';
 import Slider from '../forms/Slider';
 import useHSL, { parseStringToHSL } from './useHSL';
 
@@ -46,32 +48,38 @@ const ColorSlider: FC<ColorSliderProps> = ({ value, onChange }) => {
 
   return (
     <ColorSliderWrapper>
-      <Slider
-        id="hue-slider"
-        label="Hue"
-        min={0}
-        max={360}
-        value={String(h)}
-        onChange={handleChange('setH')}
-      />
+      <FormGroup>
+        <Label htmlFor="hue-slider">Hue</Label>
+        <Slider
+          id="hue-slider"
+          min={0}
+          max={360}
+          value={String(h)}
+          onChange={handleChange('setH')}
+        />
+      </FormGroup>
 
-      <Slider
-        id="saturation-slider"
-        label="Saturation"
-        min={0}
-        max={100}
-        value={String(s)}
-        onChange={handleChange('setS')}
-      />
+      <FormGroup>
+        <Label htmlFor="saturation-slider">Saturation</Label>
+        <Slider
+          id="saturation-slider"
+          min={0}
+          max={100}
+          value={String(s)}
+          onChange={handleChange('setS')}
+        />
+      </FormGroup>
 
-      <Slider
-        id="lightness"
-        label="Lightness"
-        min={0}
-        max={100}
-        value={String(l)}
-        onChange={handleChange('setL')}
-      />
+      <FormGroup>
+        <Label htmlFor="lightness-slider">Lightness</Label>
+        <Slider
+          id="lightness-slider"
+          min={0}
+          max={100}
+          value={String(l)}
+          onChange={handleChange('setL')}
+        />
+      </FormGroup>
     </ColorSliderWrapper>
   );
 };
