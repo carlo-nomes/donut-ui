@@ -6,10 +6,10 @@ import Button from '../Button';
 import Box from '../layout/Box';
 import { H2, H5 } from '../typography/Heading';
 
-const story = { title: 'Form' };
+const story = { title: 'Signup Form' };
 export default story;
 
-export const Form = () => {
+export const SignupForm = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) =>
     event.preventDefault();
 
@@ -21,10 +21,7 @@ export const Form = () => {
       align="stretch"
       onSubmit={handleSubmit}
     >
-      <H2>
-        Get started <br />
-        today!
-      </H2>
+      <H2>Get started today!</H2>
 
       <FormGroup>
         <Label htmlFor="email-input">Email</Label>
