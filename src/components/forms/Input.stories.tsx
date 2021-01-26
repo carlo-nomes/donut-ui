@@ -6,7 +6,7 @@ import Input from './Input';
 import Box from '../layout/Box';
 
 const story = {
-  title: 'Input',
+  title: 'Forms/Input',
   component: Input,
   argTypes: {
     onFocus: { action: 'focussed' },
