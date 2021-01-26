@@ -8,8 +8,8 @@ import React, {
 } from 'react';
 import styled from 'styled-components';
 import FormGroup from '../forms/FormGroup';
+import Input from '../forms/Input';
 import Label from '../forms/Label';
-import Slider from '../forms/Slider';
 import useHSL, { parseStringToHSL } from './useHSL';
 
 const ColorSliderWrapper = styled.div`
@@ -50,8 +50,9 @@ const ColorSlider: FC<ColorSliderProps> = ({ value, onChange }) => {
     <ColorSliderWrapper>
       <FormGroup>
         <Label htmlFor="hue-slider">Hue</Label>
-        <Slider
+        <Input
           id="hue-slider"
+          type="range"
           min={0}
           max={360}
           value={String(h)}
@@ -61,8 +62,9 @@ const ColorSlider: FC<ColorSliderProps> = ({ value, onChange }) => {
 
       <FormGroup>
         <Label htmlFor="saturation-slider">Saturation</Label>
-        <Slider
+        <Input
           id="saturation-slider"
+          type="range"
           min={0}
           max={100}
           value={String(s)}
@@ -72,8 +74,9 @@ const ColorSlider: FC<ColorSliderProps> = ({ value, onChange }) => {
 
       <FormGroup>
         <Label htmlFor="lightness-slider">Lightness</Label>
-        <Slider
+        <Input
           id="lightness-slider"
+          type="range"
           min={0}
           max={100}
           value={String(l)}
