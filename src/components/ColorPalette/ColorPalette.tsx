@@ -5,20 +5,12 @@ import Code from '../typography/Code';
 import { H1 } from '../typography/Heading';
 import ColorSlider from './ColorSlider';
 
-const Palette = styled(Box)`
-  background-color: var(--colors-darken-1);
-  border-radius: var(--border-radius-default);
-
-  max-width: 100%;
-  overflow-x: auto;
-`;
-
 const Color = styled(Box)<BoxProps>`
   background-color: ${({ color }) => color};
 
   border-style: solid;
   border-width: var(--border-width-large);
-  border-color: var(--colors-darken-3);
+  border-color: var(--colors-gray-3);
   border-radius: var(--border-radius-default);
 `;
 
@@ -51,13 +43,13 @@ const ColorPalette: FC<ColorPaletteProps> = () => {
   return (
     <>
       <H1>Primary</H1>
-      <Palette direction="row" justify="between">
+      <Box direction="row" justify="between">
         <ColorSelector color="hsl(175deg, 50%, 90%)" />
         <ColorSelector color="hsl(175deg, 50%, 75%)" />
         <ColorSelector color="hsl(175deg, 50%, 90%)" />
         <ColorSelector color="hsl(175deg, 50%, 30%)" />
         <ColorSelector color="hsl(175deg, 50%, 20%)" />
-      </Palette>
+      </Box>
     </>
   );
 };

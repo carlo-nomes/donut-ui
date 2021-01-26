@@ -16,17 +16,12 @@ const variables = css`
     --colors-warning: #b7af3c;
     --colors-danger: #b7403c;
 
-    --colors-darken-1: rgba(0, 0, 0, 0.05);
-    --colors-darken-2: rgba(0, 0, 0, 0.1);
-    --colors-darken-3: rgba(0, 0, 0, 0.2);
-    --colors-darken-4: rgba(0, 0, 0, 0.4);
-    --colors-darken-5: rgba(0, 0, 0, 0.8);
-
-    --colors-lighten-1: rgba(255, 255, 255, 0.05);
-    --colors-lighten-2: rgba(255, 255, 255, 0.1);
-    --colors-lighten-3: rgba(255, 255, 255, 0.2);
-    --colors-lighten-4: rgba(255, 255, 255, 0.4);
-    --colors-lighten-5: rgba(255, 255, 255, 0.8);
+    --colors-gray: #5e5e5e;
+    --colors-gray-1: #f8f8f8;
+    --colors-gray-2: #999999;
+    --colors-gray-3: #5e5e5e;
+    --colors-gray-4: #333333;
+    --colors-gray-5: #262626;
 
     --border-width-default: 0.05rem;
     --border-width-large: 0.15rem;
