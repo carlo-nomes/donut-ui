@@ -5,7 +5,7 @@ import Code from './Code';
 import { H1, H2, H3, H4, H5 } from './Heading';
 import Text from './Text';
 
-const story = { title: 'Typography' };
+const story = { title: 'General/Typography' };
 export default story;
 
 const CenterBox: FC<BoxProps> = (props) => (

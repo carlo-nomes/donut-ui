@@ -3,7 +3,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import Box from './Box';
 
-const story = { title: 'Layout' };
+const story = { title: 'General/Box' };
 export default story;
 
 const borderStyle = css`

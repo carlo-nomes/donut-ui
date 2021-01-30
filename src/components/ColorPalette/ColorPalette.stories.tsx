@@ -3,7 +3,7 @@ import ColorPaletteComponent, { ColorPaletteProps } from './ColorPalette';
 import { Story } from '@storybook/react/types-6-0';
 
 const story = {
-  title: 'ColorPalette',
+  title: 'General/Color Palette',
   component: ColorPaletteComponent,
 };
 export default story;
