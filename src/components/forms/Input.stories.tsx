@@ -41,6 +41,51 @@ NumberInput.args = {
   placeholder: '100',
 };
 
+export const EmailInput = Template.bind({});
+EmailInput.args = {
+  label: 'Email',
+  id: 'email-input',
+  type: 'email',
+  placeholder: 'ash.ketchum@pokemon.be',
+};
+
+export const PhoneInput = Template.bind({});
+PhoneInput.args = {
+  label: 'Phone',
+  id: 'phone-input',
+  type: 'tel',
+  placeholder: '+324000000',
+};
+
+export const PasswordInput = Template.bind({});
+PasswordInput.args = {
+  label: 'Password',
+  id: 'password-input',
+  type: 'password',
+};
+
+export const DateInput = Template.bind({});
+DateInput.args = {
+  label: 'Date',
+  id: 'date-input',
+  type: 'date',
+};
+
+export const UrlInput = Template.bind({});
+UrlInput.args = {
+  label: 'Url',
+  id: 'url-input',
+  type: 'url',
+  placeholder: 'https://test.com',
+};
+
+export const TimeInput = Template.bind({});
+TimeInput.args = {
+  label: 'Time',
+  id: 'time-input',
+  type: 'time',
+};
+
 export const RangeInput = Template.bind({});
 RangeInput.args = {
   label: 'Range',
