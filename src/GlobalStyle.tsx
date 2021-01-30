@@ -25,7 +25,7 @@ const variables = css`
     --colors-gray-4: #333333;
     --colors-gray-5: #262626;
 
-    --border-width-default: 0.05rem;
+    --border-width-default: 0.0625rem; // 1 px
     --border-width-large: 0.15rem;
     --border-radius-default: 0.25rem;
     --colors-button-hover-overlay: rgba(0, 0, 0, 0.1);
