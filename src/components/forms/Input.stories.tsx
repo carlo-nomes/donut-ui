@@ -16,16 +16,38 @@ const story = {
 };
 export default story;
 
-const Template: Story = ({ label, ...args }) => (
+const CenterDecorator = (Story: Story) => (
   <Box width="500px" mx="auto" align="stretch">
-    <FormGroup>
-      <Label htmlFor={args.id}>{label}</Label>
-      <Input {...args} />
-    </FormGroup>
+    <Story />
   </Box>
 );
 
+const Template: Story = ({ label, ...args }) => (
+  <FormGroup>
+    <Label htmlFor={args.id}>{label}</Label>
+    <Input {...args} />
+  </FormGroup>
+);
+
+export const All: Story = () => {
+  const module = require('./Input.stories');
+  const InputStories: Story[] = Object.keys(module)
+    .filter((key) => key.match(/.*Input/))
+    .map((key) => module[key]);
+
+  return (
+    <>
+      {InputStories.map((Story, index) => (
+        <Story key={index} {...Story.args} />
+      ))}
+    </>
+  );
+};
+All.storyName = 'All Inputs';
+All.decorators = [CenterDecorator];
+
 export const TextInput = Template.bind({});
+TextInput.decorators = [CenterDecorator];
 TextInput.args = {
   label: 'Text',
   id: 'text-input',
@@ -34,6 +56,7 @@ TextInput.args = {
 };
 
 export const NumberInput = Template.bind({});
+NumberInput.decorators = [CenterDecorator];
 NumberInput.args = {
   label: 'Number',
   id: 'number-input',
@@ -42,6 +65,7 @@ NumberInput.args = {
 };
 
 export const EmailInput = Template.bind({});
+EmailInput.decorators = [CenterDecorator];
 EmailInput.args = {
   label: 'Email',
   id: 'email-input',
@@ -50,6 +74,7 @@ EmailInput.args = {
 };
 
 export const PhoneInput = Template.bind({});
+PhoneInput.decorators = [CenterDecorator];
 PhoneInput.args = {
   label: 'Phone',
   id: 'phone-input',
@@ -58,6 +83,7 @@ PhoneInput.args = {
 };
 
 export const PasswordInput = Template.bind({});
+PasswordInput.decorators = [CenterDecorator];
 PasswordInput.args = {
   label: 'Password',
   id: 'password-input',
@@ -65,6 +91,7 @@ PasswordInput.args = {
 };
 
 export const DateInput = Template.bind({});
+DateInput.decorators = [CenterDecorator];
 DateInput.args = {
   label: 'Date',
   id: 'date-input',
@@ -72,6 +99,7 @@ DateInput.args = {
 };
 
 export const UrlInput = Template.bind({});
+UrlInput.decorators = [CenterDecorator];
 UrlInput.args = {
   label: 'Url',
   id: 'url-input',
@@ -80,6 +108,7 @@ UrlInput.args = {
 };
 
 export const TimeInput = Template.bind({});
+TimeInput.decorators = [CenterDecorator];
 TimeInput.args = {
   label: 'Time',
   id: 'time-input',
@@ -87,6 +116,7 @@ TimeInput.args = {
 };
 
 export const RangeInput = Template.bind({});
+RangeInput.decorators = [CenterDecorator];
 RangeInput.args = {
   label: 'Range',
   id: 'range-input',
