@@ -7,6 +7,8 @@ const variables = css`
     --font-family-serif: 'Roboto Slab', serif;
     --font-family-mono: 'Source Code Pro', monospace;
 
+    --transition-duration-default: 500ms;
+
     --colors-background: #f8f8f8;
     --colors-text: #262626;
     --colors-text-light: #f8f8f8;
@@ -26,6 +28,7 @@ const variables = css`
     --border-width-default: 0.05rem;
     --border-width-large: 0.15rem;
     --border-radius-default: 0.25rem;
+    --colors-button-hover-overlay: rgba(0, 0, 0, 0.1);
 
     --spacing-default: 1rem;
   }
