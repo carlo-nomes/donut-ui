@@ -4,6 +4,7 @@ import FormGroup from './FormGroup';
 import Label from './Label';
 import Input from './Input';
 import Box from '../layout/Box';
+import { StoryFnReactReturnType } from '@storybook/react/dist/client/preview/types';
 
 const story = {
   title: 'Forms/Input',
@@ -16,9 +17,9 @@ const story = {
 };
 export default story;
 
-const CenterDecorator = (Story: Story) => (
+const CenterDecorator = (Story: () => StoryFnReactReturnType) => (
   <Box width="500px" mx="auto" align="stretch">
-    <Story />
+    {Story()}
   </Box>
 );
 
