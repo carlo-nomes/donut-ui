@@ -1,5 +1,6 @@
 import { Story } from '@storybook/react/types-6-0';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
+import CenterDecorator from '../../../.storybook/decorators/CenterDecorator';
 import Button from '../Button';
 import Box from '../layout/Box';
 import { H2, H5 } from '../typography/Heading';
@@ -16,6 +17,7 @@ const story = {
     onSubmit: { action: 'submitted' },
     onCancel: { action: 'cancelled' },
   },
+  decorators: [CenterDecorator],
 };
 export default story;
 
@@ -41,7 +43,7 @@ export const SignupForm: Story = (props) => {
   };
 
   return (
-    <Box width="500px" mx="auto" align="stretch">
+    <>
       <Box as="form" align="stretch" onSubmit={handleSubmit}>
         <H2 as="h1">Get your account started today!</H2>
 
@@ -97,9 +99,10 @@ export const SignupForm: Story = (props) => {
       </Box>
       <Box mt={1} direction="row" justify="end">
         <H5 as="b">
-          Already have an account? <a href={window.location.href}>Sign in</a>
+          Already have an account?&nbsp;
+          <a href={window.location.href}>Sign in</a>
         </H5>
       </Box>
-    </Box>
+    </>
   );
 };

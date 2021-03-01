@@ -1,6 +1,6 @@
 import React from 'react';
-import Button, { ButtonProps } from './Button';
 import { Story } from '@storybook/react/types-6-0';
+import Button, { ButtonProps } from './Button';
 
 const story = {
   title: 'Button',
