@@ -7,6 +7,11 @@ const OutlinedButton = styled.button`
   color: ${({ color }) => color};
   background-color: transparent;
   border-color: ${({ color }) => color};
+
+  &:disabled {
+    color: var(--colors-button-disabled);
+    border-color: var(--colors-button-disabled);
+  }
 `;
 
 export default OutlinedButton;

@@ -7,6 +7,10 @@ const TextButton = styled.button`
   color: ${({ color }) => color};
   background-color: transparent;
   border-color: transparent;
+
+  &:disabled {
+    color: var(--colors-button-disabled);
+  }
 `;
 
 export default TextButton;

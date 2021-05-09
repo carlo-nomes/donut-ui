@@ -18,17 +18,19 @@ const variables = css`
     --colors-warning: #b7af3c;
     --colors-danger: #b7403c;
 
-    --colors-gray: #5e5e5e;
     --colors-gray-1: #f8f8f8;
     --colors-gray-2: #999999;
     --colors-gray-3: #5e5e5e;
     --colors-gray-4: #333333;
     --colors-gray-5: #262626;
+    --colors-gray: var(--colors-gray-3);
 
     --border-width-default: 0.0625rem; // 1 px
     --border-width-large: 0.15rem;
     --border-radius-default: 0.25rem;
+
     --colors-button-hover-overlay: rgba(0, 0, 0, 0.1);
+    --colors-button-disabled: var(--colors-gray-2);
 
     --spacing-default: 1rem;
   }

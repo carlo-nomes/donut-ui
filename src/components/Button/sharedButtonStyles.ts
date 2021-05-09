@@ -36,6 +36,10 @@ const sharedButtonStyles = css<SizeProps>`
       background-color: var(--colors-button-hover-overlay);
     }
   }
+
+  &:disabled:hover {
+    cursor: not-allowed;
+  }
 `;
 
 export default sharedButtonStyles;

@@ -9,6 +9,7 @@ const story = {
     children: 'Label',
     color: 'primary',
     width: 20,
+    disabled: false,
   },
 };
 export default story;
