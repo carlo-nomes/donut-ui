@@ -1,6 +1,9 @@
 import React, { HTMLProps } from 'react';
 import { SizeProps } from '../layout/css/size';
-import useColorPresets, { Color } from '../colors/useColorPresets';
+
+import useColorPresets from '../colors/useColorPresets';
+import { ColorPreset } from '../colors/Types';
+
 import FilledButton from './FilledButton';
 import OutlinedButton from './OutlineButton';
 import TextButton from './TextButton';
@@ -10,12 +13,12 @@ export type ButtonVariants = 'filled' | 'outline' | 'text';
 export type ButtonProps = HTMLProps<HTMLButtonElement> &
   SizeProps & {
     variant?: ButtonVariants;
-    color?: Color;
+    color?: ColorPreset | string;
   };
 
 const Button = (props: ButtonProps) => {
-  const { variant = 'filled', color: presetColor, ...other } = props;
-  const color = useColorPresets(presetColor || 'default');
+  const { variant, color: presetColor, ...other } = props;
+  const { color } = useColorPresets(presetColor || 'default');
 
   switch (variant) {
     case 'text':
@@ -23,6 +26,7 @@ const Button = (props: ButtonProps) => {
     case 'outline':
       return <OutlinedButton color={color} {...(other as any)} />;
     case 'filled':
+    default:
       return <FilledButton color={color} {...(other as any)} />;
   }
 };

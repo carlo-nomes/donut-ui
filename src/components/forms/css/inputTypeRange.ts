@@ -6,7 +6,7 @@ const thumb = css`
   height: 1rem;
   width: 1rem;
 
-  background-color: var(--colors-gray-2);
+  background-color: var(--colors-gray);
 
   border-radius: 100%;
 
@@ -24,7 +24,7 @@ const trackCss = css`
 
   width: 100%;
   height: var(--border-width-default);
-  background-color: var(--colors-gray-2);
+  background-color: var(--colors-gray);
 `;
 
 const inputTypeRange = css`

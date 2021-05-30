@@ -14,9 +14,9 @@ const Input = styled.input`
   border-style: solid;
   border-width: var(--border-width-default);
   border-radius: var(--border-radius-default);
-  border-color: var(--colors-grey-2);
+  border-color: var(--colors-gray);
 
-  background-color: var(--colors-grey-1);
+  background-color: var(--colors-gray-100);
 
   &:active,
   &:focus {

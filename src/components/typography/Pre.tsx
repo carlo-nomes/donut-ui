@@ -6,7 +6,7 @@ const Pre = styled.pre`
   margin: 0;
   padding: var(--spacing-default);
 
-  background-color: var(--colors-gray-2);
+  background-color: var(--colors-gray-200);
 `;
 
 export default Pre;

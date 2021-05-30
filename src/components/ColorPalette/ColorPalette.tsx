@@ -10,7 +10,7 @@ const Color = styled(Box)<BoxProps>`
 
   border-style: solid;
   border-width: var(--border-width-large);
-  border-color: var(--colors-gray-3);
+  border-color: var(--colors-gray-500);
   border-radius: var(--border-radius-default);
 `;
 
