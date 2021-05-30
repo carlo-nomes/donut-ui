@@ -33,7 +33,7 @@ const AlertWrapper = styled.div<{ bg?: string; fg?: string }>`
 export type AlertProps = { color?: ColorPreset };
 const Alert = (props: AlertProps) => {
   const { color, shades } = useColorPresets(props.color || 'gray');
-  console.log(shades);
+
   return (
     <ColorContext value={{ color, shades }}>
       <AlertWrapper
