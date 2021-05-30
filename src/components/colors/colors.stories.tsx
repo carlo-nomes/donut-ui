@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Story } from '@storybook/react/types-6-0';
 
-import { ColorPreset } from './Types';
-import useColorPresets from './useColorPresets';
+import useColorPresets, { ColorPreset } from './useColorPresets';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -15,8 +14,8 @@ const Wrapper = styled.div`
   justify-content: stretch;
 `;
 
-const Shade = styled.div`
-  background-color: ${({ color }) => color};
+const Shade = styled.div<{ bg: string }>`
+  background-color: ${({ bg }) => bg};
   text-align: center;
   padding: 1rem;
 `;
@@ -29,7 +28,7 @@ const Template: Story<{ color: ColorPreset }> = (args) => {
   return (
     <Wrapper>
       {Object.entries(shades).map(([key, color]) => (
-        <Shade key={key} color={color}>
+        <Shade key={key} bg={color}>
           {args.color} {key}
         </Shade>
       ))}

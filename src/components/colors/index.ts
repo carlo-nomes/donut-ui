@@ -1,3 +1,4 @@
 import ColorContext, { useColorContext } from './ColorContext';
+import useColorPresets from './useColorPresets';
 
-export { ColorContext, useColorContext };
+export { ColorContext, useColorContext, useColorPresets };

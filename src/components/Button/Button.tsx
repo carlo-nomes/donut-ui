@@ -1,8 +1,8 @@
 import React, { HTMLProps } from 'react';
 import { SizeProps } from '../layout/css/size';
 
-import useColorPresets from '../colors/useColorPresets';
-import { ColorPreset } from '../colors/Types';
+import { useColorPresets } from '../colors';
+import { ColorPreset } from '../colors/useColorPresets';
 
 import FilledButton from './FilledButton';
 import OutlinedButton from './OutlineButton';

@@ -4,10 +4,11 @@ import { useColorContext } from '../colors';
 
 const MessageWrapper = styled.p`
   grid-area: message;
+
   color: ${({ color }) => color};
 `;
-interface AlertMessageProps {}
-const Message = (props: AlertMessageProps) => {
+interface Props {}
+const Message = (props: Props) => {
   const { shades } = useColorContext();
 
   return <MessageWrapper color={shades?.[700] || 'default'} {...props} />;

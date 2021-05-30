@@ -1,5 +1,17 @@
-import { ColorPreset } from './Types';
-import { getShades } from './shades.util';
+export type ColorPreset =
+  | 'gray'
+  | 'primary'
+  | 'secondary'
+  | 'warning'
+  | 'danger';
+
+const shadesBase = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+const getShades = (color: ColorPreset): { [key: number]: string } => {
+  return shadesBase.reduce((acc, curr) => {
+    const cssVar = `var(--colors-${color}-${curr})`;
+    return { ...acc, [curr]: cssVar };
+  }, {});
+};
 
 const useColorPresets = (color: ColorPreset | string) => {
   if (!color && process.env.NODE_ENV === 'development') {

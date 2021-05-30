@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { ColorContext } from '../colors';
-import { ColorPreset } from '../colors/Types';
-import useColorPresets from '../colors/useColorPresets';
+import useColorPresets, { ColorPreset } from '../colors/useColorPresets';
 
 import Actions from './Actions';
 import Message from './Message';
