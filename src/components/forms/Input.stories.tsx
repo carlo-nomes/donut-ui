@@ -6,7 +6,7 @@ import Label from './Label';
 import Input from './Input';
 
 const story = {
-  title: 'Forms/Input',
+  title: 'Components/Forms/Input',
   component: Input,
   argTypes: {
     onFocus: { action: 'focussed' },

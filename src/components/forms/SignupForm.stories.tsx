@@ -9,7 +9,7 @@ import Input from './Input';
 import Label from './Label';
 
 const story = {
-  title: 'Forms/Signup Form',
+  title: 'Components/Forms/Signup Form',
   argTypes: {
     email: { type: 'string' },
     name: { type: 'string' },

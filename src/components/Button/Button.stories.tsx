@@ -3,7 +3,7 @@ import { Story } from '@storybook/react/types-6-0';
 import Button, { ButtonProps } from './Button';
 
 const story = {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
   args: {
     children: 'Label',
