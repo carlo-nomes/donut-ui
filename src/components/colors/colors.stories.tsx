@@ -25,7 +25,7 @@ const story = { title: 'General/Colors' };
 export default story;
 
 const Template: Story<{ color: ColorPreset }> = (args) => {
-  const { shades } = useColorPresets(args.color || 'gray');
+  const { shades } = useColorPresets(args.color);
 
   return (
     <Wrapper>
