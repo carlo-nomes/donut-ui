@@ -1,20 +1,21 @@
 import { css } from 'styled-components';
 
-export type SpacingProps = {
-  spacing?: boolean;
-};
-
-const spacing = css<SpacingProps>`
-  ${({ spacing }) =>
-    spacing &&
-    `
- >*{
-     margin-right: var(--spacing-default);
-     &:last-child{
-         margin-right: 0;
-     }
- }
- `}
+export const rowSpacing = css<{ space?: number | boolean }>`
+  > * {
+    margin-right: ${({ space }) =>
+      typeof space === 'number' ? `${space}rem` : 'var(--spacing-default)'};
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 `;
 
-export default spacing;
+export const columnSpacing = css<{ space?: number | boolean }>`
+  > * {
+    margin-bottom: ${({ space }) =>
+      typeof space === 'number' ? `${space}rem` : 'var(--spacing-default)'};
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+`;

@@ -3,7 +3,7 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 import CenterDecorator from '../../../.storybook/decorators/CenterDecorator';
 import Button from '../Button';
 import Box from '../layout/Box';
-import { H2, H5 } from '../typography/Heading';
+import { H2 } from '../typography/Heading';
 import FormGroup from './FormGroup';
 import Input from './Input';
 import Label from './Label';
@@ -88,7 +88,7 @@ export const SignupForm: Story = (props) => {
           />
         </FormGroup>
 
-        <Box direction="row" justify="end" spacing>
+        <Box direction="row" justify="end" space>
           <Button variant="text" type="button" onClick={onCancel}>
             Return to home
           </Button>
@@ -97,11 +97,10 @@ export const SignupForm: Story = (props) => {
           </Button>
         </Box>
       </Box>
-      <Box mt={1} direction="row" justify="end">
-        <H5 as="b">
-          Already have an account?&nbsp;
-          <a href={window.location.href}>Sign in</a>
-        </H5>
+
+      <Box mt={1} direction="row" justify="end" as="b">
+        Already have an account?&nbsp;
+        <a href={window.location.href}>Sign in</a>
       </Box>
     </>
   );
