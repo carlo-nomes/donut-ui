@@ -1,31 +1,37 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
 
-import Alert, { AlertProps } from './Alert';
+import Alert from './Alert';
 import Button from '../Button';
+import { useColorPresets } from '../colors';
+import { ColorPreset } from '../colors/useColorPresets';
 
 const story = {
   title: 'Components/Alert',
   component: Alert,
 };
 
-const Template: Story<AlertProps> = (args) => (
-  <Alert {...args}>
-    <Alert.Title>Title</Alert.Title>
-    <Alert.Message>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti
-      voluptatum eaque odit libero? Ex possimus eligendi magni voluptas nisi?
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-      repudiandae.
-    </Alert.Message>
-    <Alert.Actions>
-      <Button color="primary" variant="text">
-        Cancel
-      </Button>
-      <Button color="primary">Resolve</Button>
-    </Alert.Actions>
-  </Alert>
-);
+const Template: Story<{ color: ColorPreset }> = (args) => {
+  const { color, shades } = useColorPresets(args.color || 'gray');
+
+  return (
+    <Alert bg={shades[100]} fg={shades[500]}>
+      <Alert.Title color={shades[700]}>Title</Alert.Title>
+      <Alert.Message color={shades[600]}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti
+        voluptatum eaque odit libero? Ex possimus eligendi magni voluptas nisi?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
+        repudiandae.
+      </Alert.Message>
+      <Alert.Actions>
+        <Button color={color} variant="text">
+          Cancel
+        </Button>
+        <Button color={color}>Resolve</Button>
+      </Alert.Actions>
+    </Alert>
+  );
+};
 
 export const Default = Template.bind({});
 

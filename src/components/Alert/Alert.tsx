@@ -1,14 +1,10 @@
-import React from 'react';
 import styled from 'styled-components';
-
-import { ColorContext } from '../colors';
-import useColorPresets, { ColorPreset } from '../colors/useColorPresets';
 
 import Actions from './Actions';
 import Message from './Message';
 import Title from './Title';
 
-const AlertWrapper = styled.div<{ bg?: string; fg?: string }>`
+const Alert = styled.div<{ bg?: string; fg?: string }>`
   max-width: 100%;
 
   background-color: ${({ bg }) => bg};
@@ -29,23 +25,4 @@ const AlertWrapper = styled.div<{ bg?: string; fg?: string }>`
   padding: 1rem;
 `;
 
-export type AlertProps = { color?: ColorPreset };
-const Alert = (props: AlertProps) => {
-  const { color, shades } = useColorPresets(props.color || 'gray');
-
-  return (
-    <ColorContext value={{ color, shades }}>
-      <AlertWrapper
-        bg={shades?.[100] || ''}
-        fg={shades?.[500] || ''}
-        {...props}
-      />
-    </ColorContext>
-  );
-};
-
-Alert.Title = Title;
-Alert.Message = Message;
-Alert.Actions = Actions;
-
-export default Alert;
+export default Object.assign(Alert, { Title, Message, Actions });

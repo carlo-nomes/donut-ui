@@ -4,8 +4,16 @@ interface ColorContextInt {
   color: string;
   shades?: { [key: number]: string };
 }
-const ColorContext = createContext<ColorContextInt>({ color: 'default' });
-export const useColorContext = () => useContext(ColorContext);
+const ColorContext = createContext<ColorContextInt | null>(null);
+export const useColorContext = () => {
+  const context = useContext(ColorContext);
+
+  if (!context && process.env.NODE_ENV === 'development') {
+    console.warn('Should not use useColor outside of a ColorContextProvider');
+  }
+
+  return context as ColorContextInt;
+};
 
 interface ColorContextProviderProps {
   value: ColorContextInt;

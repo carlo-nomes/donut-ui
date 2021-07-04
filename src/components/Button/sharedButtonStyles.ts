@@ -1,6 +1,8 @@
 import { css } from 'styled-components';
 import size, { SizeProps } from '../layout/css/size';
 
+export const DEFAULT_BUTTON_COLOR = 'var(--colors-gray, #4d6f80)';
+
 const sharedButtonStyles = css<SizeProps>`
   ${size}
 
