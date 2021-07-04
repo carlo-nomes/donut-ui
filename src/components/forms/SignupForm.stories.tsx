@@ -92,7 +92,7 @@ export const SignupForm: Story = (props) => {
           <Button variant="text" type="button" onClick={onCancel}>
             Return to home
           </Button>
-          <Button color="primary" type="submit">
+          <Button color="var(--colors-primary)" type="submit">
             Create Account
           </Button>
         </Box>
