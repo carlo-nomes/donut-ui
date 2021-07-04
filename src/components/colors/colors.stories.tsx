@@ -14,8 +14,9 @@ const Wrapper = styled.div`
   justify-content: stretch;
 `;
 
-const Shade = styled.div<{ bg: string }>`
+const Shade = styled.div<{ bg: string; fg: string }>`
   background-color: ${({ bg }) => bg};
+  color: ${({ fg }) => fg};
   text-align: center;
   padding: 1rem;
 `;
@@ -25,10 +26,15 @@ export default story;
 
 const Template: Story<{ color: ColorPreset }> = (args) => {
   const { shades } = useColorPresets(args.color || 'gray');
+
   return (
     <Wrapper>
       {Object.entries(shades).map(([key, color]) => (
-        <Shade key={key} bg={color}>
+        <Shade
+          key={key}
+          bg={color}
+          fg={Number(key) <= 500 ? 'rgba(0,0,0,.8)' : 'rgba(255,255,255,.8)'}
+        >
           {args.color} {key}
         </Shade>
       ))}
