@@ -2,7 +2,6 @@ import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 import Box, { BoxProps } from '../layout/Box';
 import Code from '../typography/Code';
-import { H1 } from '../typography/Heading';
 import ColorSlider from './ColorSlider';
 
 const Color = styled(Box)<BoxProps>`
@@ -15,10 +14,10 @@ const Color = styled(Box)<BoxProps>`
 `;
 
 export type ColorSelectorProps = {
-  color: string;
+  color?: string;
 };
-const ColorSelector: FC<ColorSelectorProps> = ({ color: initialColor }) => {
-  const [color, setColor] = useState(initialColor);
+const ColorSelector = (props: ColorSelectorProps) => {
+  const [color, setColor] = useState(props.color || '');
 
   return (
     <Box p={1} align="center">
@@ -38,20 +37,4 @@ const ColorSelector: FC<ColorSelectorProps> = ({ color: initialColor }) => {
   );
 };
 
-export type ColorPaletteProps = {};
-const ColorPalette: FC<ColorPaletteProps> = () => {
-  return (
-    <>
-      <H1>Primary</H1>
-      <Box direction="row" justify="between">
-        <ColorSelector color="hsl(175deg, 50%, 90%)" />
-        <ColorSelector color="hsl(175deg, 50%, 75%)" />
-        <ColorSelector color="hsl(175deg, 50%, 90%)" />
-        <ColorSelector color="hsl(175deg, 50%, 30%)" />
-        <ColorSelector color="hsl(175deg, 50%, 20%)" />
-      </Box>
-    </>
-  );
-};
-
-export default ColorPalette;
+export default ColorSelector;
