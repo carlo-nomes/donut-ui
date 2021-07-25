@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import inputTypeRange from './css/inputTypeRange';
+import inputTypeCheckbox from './css/inputTypeCheckbox';
 
 const Input = styled.input`
   ${inputTypeRange}
+  ${inputTypeCheckbox}
 
   font-family: var(--font-family-sans);
   color: var(--colors-text);

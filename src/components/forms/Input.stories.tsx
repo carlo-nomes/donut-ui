@@ -118,3 +118,11 @@ RangeInput.args = {
   min: 0,
   max: 10,
 };
+
+export const CheckboxInput: Story = () => (
+  <FormGroup>
+    <Input id="checkbox-input" type="checkbox" />
+    <Label htmlFor="checkbox-input">Checkbox</Label>
+  </FormGroup>
+);
+CheckboxInput.decorators = [CenterDecorator];
