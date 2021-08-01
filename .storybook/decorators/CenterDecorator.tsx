@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from '../../src/components/layout/Box';
+import { Box } from '../../packages/layout';
 import { StoryFnReactReturnType } from '@storybook/react/dist/client/preview/types';
 
 const CenterDecorator = (Story: () => StoryFnReactReturnType) => (

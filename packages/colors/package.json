@@ -1,0 +1,16 @@
+{
+  "name": "@donut-ui/colors",
+  "version": "0.0.0",
+  "main": "lib/index.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "styled-normalize": "^8.0.7"
+  }
+}
