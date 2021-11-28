@@ -1,9 +1,4 @@
-export type ColorPreset =
-  | 'gray'
-  | 'primary'
-  | 'secondary'
-  | 'warning'
-  | 'danger';
+export type ColorPreset = 'gray' | 'primary' | 'secondary' | 'warning' | 'danger';
 
 export enum Shade {
   'S100' = '100',

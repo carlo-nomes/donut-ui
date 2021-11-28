@@ -20,11 +20,7 @@ interface ColorContextProviderProps {
   children?: ReactNode;
 }
 const ColorContextProvider = (props: ColorContextProviderProps) => {
-  return (
-    <ColorContext.Provider value={props.value}>
-      {props.children}
-    </ColorContext.Provider>
-  );
+  return <ColorContext.Provider value={props.value}>{props.children}</ColorContext.Provider>;
 };
 
 export default ColorContextProvider;

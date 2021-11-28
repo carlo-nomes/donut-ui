@@ -11,14 +11,7 @@ export type MarginProps = {
 };
 type Position = 'top' | 'right' | 'bottom' | 'left';
 const get = (position: Position) => {
-  const key =
-    position === 'top'
-      ? 'mt'
-      : position === 'right'
-      ? 'mr'
-      : position === 'bottom'
-      ? 'mb'
-      : 'ml';
+  const key = position === 'top' ? 'mt' : position === 'right' ? 'mr' : position === 'bottom' ? 'mb' : 'ml';
   const fbKey = ['top', 'bottom'].includes(position) ? 'my' : 'mx';
 
   return (props: MarginProps): string => {

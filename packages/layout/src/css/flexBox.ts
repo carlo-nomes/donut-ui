@@ -2,13 +2,7 @@ import { css } from 'styled-components';
 
 type AlignOptions = 'start' | 'end' | 'center' | 'stretch';
 
-type JustifyOptions =
-  | 'start'
-  | 'end'
-  | 'center'
-  | 'between'
-  | 'around'
-  | 'evenly';
+type JustifyOptions = 'start' | 'end' | 'center' | 'between' | 'around' | 'evenly';
 
 export type FlexBoxProps = {
   direction?: 'column' | 'row';

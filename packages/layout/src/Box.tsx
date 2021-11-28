@@ -5,10 +5,7 @@ import padding, { PaddingProps } from './css/padding';
 import size, { SizeProps } from './css/size';
 import { columnSpacing, rowSpacing } from './css/spacing';
 
-export type BoxProps = SizeProps &
-  MarginProps &
-  PaddingProps &
-  FlexBoxProps & { space?: boolean | number };
+export type BoxProps = SizeProps & MarginProps & PaddingProps & FlexBoxProps & { space?: boolean | number };
 
 const determineSpacing = ({ space, direction }: BoxProps) => {
   if (typeof space !== 'number' && space !== true) return;

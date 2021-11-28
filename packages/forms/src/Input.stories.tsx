@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
+
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Story } from '@storybook/react/types-6-0';
 
 import CenterDecorator from '../../../.storybook/decorators/CenterDecorator';
@@ -7,7 +9,7 @@ import FormGroup from './FormGroup';
 import Label from './Label';
 import Input from './Input';
 
-const story = {
+const story: ComponentMeta<typeof Input> = {
   title: 'Components/Forms/Input',
   component: Input,
   argTypes: {
@@ -16,20 +18,21 @@ const story = {
     onChange: { action: 'changed' },
   },
 };
-export default story;
 
-const Template: Story = ({ label, ...args }) => (
+type InputWithLabelProps = HTMLProps<HTMLInputElement> & { label: string };
+const InputWithLabel = ({ label, ...args }: InputWithLabelProps) => (
   <FormGroup>
     <Label htmlFor={args.id}>{label}</Label>
     <Input {...args} />
   </FormGroup>
 );
+const Template: ComponentStory<typeof InputWithLabel> = (args) => <InputWithLabel {...args} />;
 
-export const All: Story = () => {
-  const module = require('./Input.stories');
-  const InputStories: Story[] = Object.keys(module)
+export const All = () => {
+  const modules: Record<string, Story> = require('./Input.stories');
+  const InputStories = Object.keys(modules)
     .filter((key) => key.match(/.*Input/))
-    .map((key) => module[key]);
+    .map((key) => modules[key]);
 
   return (
     <>
@@ -121,10 +124,12 @@ RangeInput.args = {
   max: 10,
 };
 
-export const CheckboxInput: Story = () => (
+export const CheckboxInput = () => (
   <FormGroup>
     <Input id="checkbox-input" type="checkbox" />
     <Label htmlFor="checkbox-input">Checkbox</Label>
   </FormGroup>
 );
 CheckboxInput.decorators = [CenterDecorator];
+
+export default story;

@@ -24,15 +24,7 @@ const ColorSelector = (props: ColorSelectorProps) => {
 
   return (
     <Box p={1} align="center">
-      <Color
-        width={17}
-        height={17}
-        mb={1}
-        p={1}
-        align="center"
-        justify="center"
-        color={color}
-      >
+      <Color width={17} height={17} mb={1} p={1} align="center" justify="center" color={color}>
         <Code>{color}</Code>
       </Color>
       <ColorSlider value={color} onChange={setColor} />

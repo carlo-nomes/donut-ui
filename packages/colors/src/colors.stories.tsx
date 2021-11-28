@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Story } from '@storybook/react/types-6-0';
+
+import { Story, Meta } from '@storybook/react/types-6-0';
 
 import useColorPresets, { ColorPreset } from './useColorPresets';
 
@@ -21,8 +22,7 @@ const Shade = styled.div<{ bg: string; fg: string }>`
   padding: 1rem;
 `;
 
-const story = { title: 'General/Colors' };
-export default story;
+const story: Meta = { title: 'General/Colors' };
 
 const Template: Story<{ color: ColorPreset }> = (args) => {
   const { shades } = useColorPresets(args.color);
@@ -30,11 +30,7 @@ const Template: Story<{ color: ColorPreset }> = (args) => {
   return (
     <Wrapper>
       {Object.entries(shades).map(([key, color]) => (
-        <Shade
-          key={key}
-          bg={color}
-          fg={Number(key) <= 500 ? 'rgba(0,0,0,.8)' : 'rgba(255,255,255,.8)'}
-        >
+        <Shade key={key} bg={color} fg={Number(key) <= 500 ? 'rgba(0,0,0,.8)' : 'rgba(255,255,255,.8)'}>
           {args.color} {key}
         </Shade>
       ))}
@@ -66,3 +62,5 @@ export const Danger = Template.bind({});
 Danger.args = {
   color: 'danger',
 };
+
+export default story;

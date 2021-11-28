@@ -1,11 +1,4 @@
-import React, {
-  Dispatch,
-  SetStateAction,
-  ChangeEvent,
-  FC,
-  useEffect,
-  useCallback,
-} from 'react';
+import React, { Dispatch, SetStateAction, ChangeEvent, FC, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 
 import { FormGroup, Input, Label } from '@donut-ui/forms';
@@ -50,38 +43,17 @@ const ColorSlider: FC<ColorSliderProps> = ({ value, onChange }) => {
     <ColorSliderWrapper>
       <FormGroup>
         <Label htmlFor="hue-slider">Hue</Label>
-        <Input
-          id="hue-slider"
-          type="range"
-          min={0}
-          max={360}
-          value={String(h)}
-          onChange={handleChange('setH')}
-        />
+        <Input id="hue-slider" type="range" min={0} max={360} value={String(h)} onChange={handleChange('setH')} />
       </FormGroup>
 
       <FormGroup>
         <Label htmlFor="saturation-slider">Saturation</Label>
-        <Input
-          id="saturation-slider"
-          type="range"
-          min={0}
-          max={100}
-          value={String(s)}
-          onChange={handleChange('setS')}
-        />
+        <Input id="saturation-slider" type="range" min={0} max={100} value={String(s)} onChange={handleChange('setS')} />
       </FormGroup>
 
       <FormGroup>
         <Label htmlFor="lightness-slider">Lightness</Label>
-        <Input
-          id="lightness-slider"
-          type="range"
-          min={0}
-          max={100}
-          value={String(l)}
-          onChange={handleChange('setL')}
-        />
+        <Input id="lightness-slider" type="range" min={0} max={100} value={String(l)} onChange={handleChange('setL')} />
       </FormGroup>
     </ColorSliderWrapper>
   );

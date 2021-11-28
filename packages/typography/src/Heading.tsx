@@ -1,14 +1,6 @@
 import styled, { css } from 'styled-components';
 
-type AlignOptions =
-  | 'left'
-  | 'right'
-  | 'center'
-  | 'justify'
-  | 'justify-all'
-  | 'start'
-  | 'end'
-  | 'match-parent';
+type AlignOptions = 'left' | 'right' | 'center' | 'justify' | 'justify-all' | 'start' | 'end' | 'match-parent';
 
 type HeadingProps = {
   align?: AlignOptions;

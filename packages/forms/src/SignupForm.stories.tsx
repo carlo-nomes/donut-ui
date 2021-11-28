@@ -1,5 +1,4 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { Story } from '@storybook/react/types-6-0';
 
 import CenterDecorator from '../../../.storybook/decorators/CenterDecorator';
 
@@ -22,9 +21,15 @@ const story = {
   },
   decorators: [CenterDecorator],
 };
-export default story;
 
-export const SignupForm: Story = (props) => {
+type SignupFormProps = {
+  email?: string;
+  name?: string;
+  password?: string;
+  onSubmit?: () => void;
+  onCancel: () => void;
+};
+export const SignupForm = (props: SignupFormProps) => {
   const { email = '', name = '', password = '', onSubmit, onCancel } = props;
 
   const [formData, setFormData] = useState({
@@ -66,14 +71,7 @@ export const SignupForm: Story = (props) => {
 
         <FormGroup>
           <Label htmlFor="name-input">Name</Label>
-          <Input
-            id="name-input"
-            name="name"
-            placeholder="Ash Ketchum"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <Input id="name-input" name="name" placeholder="Ash Ketchum" value={formData.name} onChange={handleChange} required />
         </FormGroup>
 
         <FormGroup>
@@ -108,3 +106,5 @@ export const SignupForm: Story = (props) => {
     </>
   );
 };
+
+export default story;

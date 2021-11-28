@@ -1,17 +1,15 @@
 import React from 'react';
-import { Story } from '@storybook/react/types-6-0';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import ColorSelector, { ColorSelectorProps } from './ColorSelector';
+import ColorSelector from './ColorSelector';
 
-const story = {
+const story: ComponentMeta<typeof ColorSelector> = {
   title: 'General/Color Selector',
   component: ColorSelector,
 };
 export default story;
 
-const Template: Story<ColorSelectorProps> = (args) => (
-  <ColorSelector {...args} />
-);
+const Template: ComponentStory<typeof ColorSelector> = (args) => <ColorSelector {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
