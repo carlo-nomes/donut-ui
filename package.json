@@ -7,6 +7,8 @@
   ],
   "scripts": {
     "prepare": "husky install",
+    "format": "prettier --write './packages/**/*.{js,jsx,ts,tsx,json,html,md}'",
+    "lint": "eslint --fix 'packages/**/*.{js,jsx,ts,tsx}'",
     "test": "",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build --stream",
@@ -14,14 +16,20 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@storybook/addon-actions": "^6.4.0",
     "@storybook/addon-essentials": "^6.4.0",
     "@storybook/addon-links": "^6.4.0",
     "@storybook/react": "^6.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "babel-loader": "^8.2.3",
+    "eslint": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.0",
     "lerna": "^4.0.0",
     "lint-staged": "^11.1.1",
@@ -34,6 +42,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,html,css,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx,json,html,css,md}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   }
 }
