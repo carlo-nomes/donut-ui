@@ -43,26 +43,26 @@ const variables = css`
 
   // Warning Palette
   --colors-warning-100: hsl(60, 100%, 90%);
-  --colors-warning-200: hsl(60, 95%, 75%);
-  --colors-warning-300: hsl(55, 95%, 65%);
-  --colors-warning-400: hsl(50, 95%, 65%);
-  --colors-warning-500: hsl(45, 95%, 65%);
-  --colors-warning-600: hsl(40, 95%, 65%);
-  --colors-warning-700: hsl(40, 90%, 55%);
-  --colors-warning-800: hsl(35, 80%, 55%);
-  --colors-warning-900: hsl(35, 100%, 30%);
+  --colors-warning-200: hsl(60, 100%, 75%);
+  --colors-warning-300: hsl(55, 80%, 65%);
+  --colors-warning-400: hsl(50, 80%, 60%);
+  --colors-warning-500: hsl(45, 80%, 60%);
+  --colors-warning-600: hsl(40, 60%, 35%);
+  --colors-warning-700: hsl(40, 60%, 20%);
+  --colors-warning-800: hsl(40, 60%, 15%);
+  --colors-warning-900: hsl(40, 60%, 10%);
   --colors-warning: var(--colors-warning-500);
 
   // Danger Palette
-  --colors-danger-100: hsl(0, 95%, 95%);
-  --colors-danger-200: hsl(0, 85%, 85%);
-  --colors-danger-300: hsl(0, 85%, 75%);
-  --colors-danger-400: hsl(0, 85%, 65%);
-  --colors-danger-500: hsl(0, 85%, 55%);
-  --colors-danger-600: hsl(0, 90%, 45%);
-  --colors-danger-700: hsl(0, 90%, 35%);
-  --colors-danger-800: hsl(0, 90%, 25%);
-  --colors-danger-900: hsl(0, 90%, 15%);
+  --colors-danger-100: hsl(10, 95%, 95%);
+  --colors-danger-200: hsl(10, 85%, 85%);
+  --colors-danger-300: hsl(10, 85%, 75%);
+  --colors-danger-400: hsl(10, 85%, 65%);
+  --colors-danger-500: hsl(10, 85%, 50%);
+  --colors-danger-600: hsl(10, 65%, 25%);
+  --colors-danger-700: hsl(10, 65%, 15%);
+  --colors-danger-800: hsl(10, 65%, 10%);
+  --colors-danger-900: hsl(10, 65%, 5%);
   --colors-danger: var(--colors-danger-500);
 
   --font-family-sans: 'Open Sans', sans-serif;
