@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-import inputTypeRange from './css/inputTypeRange';
-import inputTypeCheckbox from './css/inputTypeCheckbox';
+import { inputTypeRange, inputTypeCheckbox } from './css';
 
 const Input = styled.input`
   ${inputTypeRange}

@@ -22,12 +22,6 @@
   "plugins": ["@typescript-eslint", "import", "react", "jsx-a11y"],
   "rules": {
     "import/no-unresolved": "off",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_"
-      }
-    ]
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
   }
 }

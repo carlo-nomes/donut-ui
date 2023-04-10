@@ -1,20 +1,24 @@
 {
   "name": "@donut-ui/alert",
   "version": "0.0.0",
-  "main": "lib/index.ts",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "tsc -b",
     "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo"
   },
   "dependencies": {
+    "@donut-ui/typography": "^0.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
-    "styled-components": "^5.3.0",
-    "styled-normalize": "^8.0.7",
-    "@donut-ui/typography": "0.0.0"
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.15"
   }
 }

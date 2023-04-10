@@ -1,9 +1,5 @@
 {
-  "packages": ["packages/*"],
-  "version": "0.0.0",
-  "npmClient": "yarn",
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "useWorkspaces": true,
-  "bootstrap": {
-    "npmClientargs": ["--no-package-lock"]
-  }
+  "version": "0.0.0"
 }

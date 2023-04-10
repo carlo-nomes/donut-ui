@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react';
 
-import { SizeProps } from '@donut-ui/layout/css/size';
+import { SizeProps } from '@donut-ui/layout/src/css/size';
 
 import FilledButton from './FilledButton';
 import OutlinedButton from './OutlineButton';

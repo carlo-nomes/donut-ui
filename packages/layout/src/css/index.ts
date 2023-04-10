@@ -1,6 +1,7 @@
-import * as flexBox from './flexBox';
-import * as margin from './margin';
-import * as padding from './padding';
-import * as spacing from './spacing';
+import flexBox from './flexBox';
+import margin from './margin';
+import padding from './padding';
+import size from './size';
+import { rowSpacing, columnSpacing } from './spacing';
 
-export { flexBox, margin, padding, spacing };
+export { flexBox, margin, padding, size, rowSpacing, columnSpacing };

@@ -1,12 +1,12 @@
 import { css } from 'styled-components';
 
-import size from '@donut-ui/layout';
+import { size } from '@donut-ui/layout';
 import { SizeProps } from '@donut-ui/layout/src/css/size';
 
 export const DEFAULT_BUTTON_COLOR = 'var(--colors-gray, #4d6f80)';
 
 const sharedButtonStyles = css<SizeProps>`
-  ${size}
+  ${size};
 
   cursor: pointer;
 

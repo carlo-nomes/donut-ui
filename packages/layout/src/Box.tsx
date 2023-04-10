@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import flexBox, { FlexBoxProps } from './css/flexBox';
-import margin, { MarginProps } from './css/margin';
-import padding, { PaddingProps } from './css/padding';
-import size, { SizeProps } from './css/size';
-import { columnSpacing, rowSpacing } from './css/spacing';
+
+import { rowSpacing, columnSpacing, flexBox, size, margin, padding } from './css';
+import { FlexBoxProps } from './css/flexBox';
+import { MarginProps } from './css/margin';
+import { PaddingProps } from './css/padding';
+import { SizeProps } from './css/size';
 
 export type BoxProps = SizeProps & MarginProps & PaddingProps & FlexBoxProps & { space?: boolean | number };
 
