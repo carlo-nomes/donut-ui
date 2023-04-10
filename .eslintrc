@@ -21,6 +21,8 @@
   },
   "plugins": ["@typescript-eslint", "import", "react", "jsx-a11y"],
   "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
   }

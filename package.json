@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "license": "MIT",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "demo"
   ],
   "scripts": {
+    "demo": "cd demo && npm run dev",
     "format": "prettier --write './packages/**/*.{js,jsx,ts,tsx,json,html,md}'",
     "lint": "eslint --fix 'packages/**/*.{js,jsx,ts,tsx}'",
-    "build": "lerna run build --stream",
+    "build": "lerna run build",
     "clean": "lerna run clean --parallel"
   },
   "devDependencies": {
