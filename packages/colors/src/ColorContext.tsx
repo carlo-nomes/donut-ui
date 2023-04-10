@@ -7,11 +7,6 @@ interface ColorContextInt {
 const ColorContext = createContext<ColorContextInt | null>(null);
 export const useColorContext = () => {
   const context = useContext(ColorContext);
-
-  if (!context && process.env.NODE_ENV === 'development') {
-    console.warn('Should not use useColor outside of a ColorContextProvider');
-  }
-
   return context as ColorContextInt;
 };
 
